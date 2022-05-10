@@ -1,0 +1,56 @@
+h2{
+    color: forestgreen;
+}
+#btnCancelar{
+    border-radius: 1cm;
+    background-color:brown ;
+}
+#btnAceptar{
+    border-radius: 1cm;
+    background-color: rgb(33, 175, 80);
+}
+#btnCancelar2{
+    border-radius: 1cm;
+    background-color:brown ;
+}
+#btnAceptar2{
+    border-radius: 1cm;
+    background-color: rgb(33, 175, 80);
+}
+.informaicon{
+    background-color: blue;
+}
+#divInfo{
+    background-color: yellow;
+}
+.caja1{
+    float: left;
+    background-color: gainsboro;
+    width: 44%;
+    margin: 2%;
+    padding: 1%;
+    align-content: center;
+    border-top:12px #000000;
+}
+.caja2{
+    float: left;
+    background-color: gainsboro;
+    width: 44%;
+    margin: 2%;
+    padding: 1%;
+    align-content: center;
+    border-top:12px #000000;
+}
+#divDaosPersonales{
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 2px #000000;
+    background-color: white;
+}
+table, th, td{
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    padding-left: 7px;
+    padding-right: 7px;
+}
