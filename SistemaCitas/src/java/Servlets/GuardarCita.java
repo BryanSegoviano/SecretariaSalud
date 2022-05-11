@@ -1,8 +1,9 @@
 package Servlets;
 
 import accesoDatos.CitaJpaController;
-import accesoDatos.CitasDAO;
+import accesoDatos.ConsultaHabitante;
 import dominio.Cita;
+import dominio.Habitante;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -30,7 +31,7 @@ public class GuardarCita extends HttpServlet {
             String identificadorDoctor = request.getParameter("identificadorDoctor");
             String identificadorHabitante = request.getParameter("identificadorHabitante");
             String fechaString = request.getParameter("fecha");
-            System.out.println(fechaString);
+            
             SimpleDateFormat fechaFormato = new SimpleDateFormat("yyyy-MM-dd");
 
             Date fecha = fechaFormato.parse(fechaString);
@@ -39,11 +40,14 @@ public class GuardarCita extends HttpServlet {
             out.println("<body>");
             out.println("<script type=\"text/javascript\">");
 
-            Cita cita = new Cita(Integer.parseInt(identificadorDoctor), Integer.parseInt(identificadorHabitante), fecha);
-            citasDao.create(cita);
-
-            out.println("alert('La cita se ha registrado con exito')");
-            
+            ConsultaHabitante consultaHabitante = new ConsultaHabitante();
+            String citaid = (String) request.getAttribute("identificadorHabitante");
+            Habitante habitante = consultaHabitante.obtenerHabitantePorID(citaid);
+            if (habitante != null) {
+                Cita cita = new Cita(Integer.parseInt(identificadorDoctor), Integer.parseInt(identificadorHabitante), fecha);
+                citasDao.create(cita);
+                out.println("alert('La cita se ha registrado con exito')");
+            } 
             request.setAttribute("identificadorHabitante", identificadorHabitante);
             RequestDispatcher rd = request.getRequestDispatcher("expedienteHabitante");
             rd.forward(request, response);
@@ -52,7 +56,7 @@ public class GuardarCita extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
         } catch (Exception ex) {
-            System.out.println(ex);
+            
         }
     }
 

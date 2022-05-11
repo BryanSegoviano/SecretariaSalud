@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Registro de cita</title>
     </head>
     <body>
 
@@ -21,11 +21,11 @@
                    min="2022-05-01" max="2022-12-31">
             <br>           
             <br>
-            <label for="text"> <b>Doctor</b></label>
+            <label for="text"> <b>Doctor:</b></label>
             <input type="text" class="txt" id="identificadorDoctor" required="" name="identificadorDoctor" placeholder="Ingresa el ID del doctor" maxlength="100" pattern="^\d+$">
             <br>
             <br>
-            <label for="id"><b>Habitante</b></label>
+            <label for="id"><b>Habitante:</b></label>
             <input type="text" class="txt" id="identificadorHabitante" placeholder="Ingresa el ID del Habitate" name="identificadorHabitante"  required="" required pattern="^\d+$">
             <br>
             <br>

@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1 id="titulo">Consultar expediente</h1>
+        <h1 id="titulo">Expediente del habitante</h1>
         <div class="informaicon" id="divInfo">
 
             <div id="divIzquierda" class="caja1">
@@ -51,5 +51,6 @@
                             );                       
                     %>
                 </div>
+                <button style="width:550px;" onclick="location.href = 'index.html'">Terminar registro</button>
     </body>
 </html>
