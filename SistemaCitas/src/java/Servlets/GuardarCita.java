@@ -31,32 +31,32 @@ public class GuardarCita extends HttpServlet {
             String identificadorDoctor = request.getParameter("identificadorDoctor");
             String identificadorHabitante = request.getParameter("identificadorHabitante");
             String fechaString = request.getParameter("fecha");
-            
+
             SimpleDateFormat fechaFormato = new SimpleDateFormat("yyyy-MM-dd");
 
             Date fecha = fechaFormato.parse(fechaString);
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<body>");
-            out.println("<script type=\"text/javascript\">");
 
             ConsultaHabitante consultaHabitante = new ConsultaHabitante();
             String citaid = (String) request.getAttribute("identificadorHabitante");
             Habitante habitante = consultaHabitante.obtenerHabitantePorID(citaid);
-            if (habitante != null) {
-                Cita cita = new Cita(Integer.parseInt(identificadorDoctor), Integer.parseInt(identificadorHabitante), fecha);
-                citasDao.create(cita);
-                out.println("alert('La cita se ha registrado con exito')");
-            } 
+            
+            Cita cita = new Cita(Integer.parseInt(identificadorDoctor), Integer.parseInt(identificadorHabitante), fecha);
+            citasDao.create(cita);
+            out.println("<script type=\"text/javascript\">");
+            out.println("alert('La cita se ha registrado correctamente');");
+            out.println("</script>");
+
             request.setAttribute("identificadorHabitante", identificadorHabitante);
             RequestDispatcher rd = request.getRequestDispatcher("expedienteHabitante");
             rd.forward(request, response);
 
-            out.println("</script>");
             out.println("</body>");
             out.println("</html>");
         } catch (Exception ex) {
-            
+
         }
     }
 
