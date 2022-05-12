@@ -1,0 +1,43 @@
+
+.caja1{
+    text-align: center;
+    background-color: gainsboro;
+
+    margin: 2%;
+    padding: 1%;
+    align-content: center;
+    border-top:12px #000000;
+}
+.caja2{
+    float: left;
+    background-color: gainsboro;
+    width: 44%;
+    margin: 2%;
+    padding: 1%;
+    align-content: center;
+    border-top:12px #000000;
+}
+#divDaosPersonales{
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 2px #000000;
+    background-color: white;
+}
+table, th, td{
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+body{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+}
+
+label{
+    font-size: 20px;
+}
