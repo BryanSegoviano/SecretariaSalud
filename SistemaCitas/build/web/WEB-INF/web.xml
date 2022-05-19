@@ -16,6 +16,10 @@
         <servlet-name>registrarCita</servlet-name>
         <servlet-class>Servlets.registrarCita</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>InicioSesion</servlet-name>
+        <servlet-class>Servlets.InicioSesion</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GuardarCitaServlet</servlet-name>
         <url-pattern>/GuardarCita</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>registrarCita</servlet-name>
         <url-pattern>/registrarCita</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InicioSesion</servlet-name>
+        <url-pattern>/InicioSesion</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

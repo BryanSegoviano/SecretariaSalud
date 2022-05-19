@@ -26,11 +26,11 @@ DROP TABLE IF EXISTS `citas`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `citas` (
   `idcita` int NOT NULL AUTO_INCREMENT,
-  `iddoctor` int NOT NULL,
-  `idhabitante` int NOT NULL,
-  `fecha` date NOT NULL,
+  `doctor` varchar(45) NOT NULL,
+  `nsshabitante` varchar(45) NOT NULL,
+  `fecha` datetime NOT NULL,
   PRIMARY KEY (`idcita`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=120 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `citas` (
 
 LOCK TABLES `citas` WRITE;
 /*!40000 ALTER TABLE `citas` DISABLE KEYS */;
-INSERT INTO `citas` VALUES (2,13,23,'2022-05-12'),(3,1,2,'2022-05-17'),(4,1,3,'2022-05-11'),(5,21,3,'2022-05-12'),(6,2,2,'2022-05-04'),(7,2,2,'2022-05-11'),(8,23,21,'2022-05-20'),(9,2,2,'2022-05-18'),(10,1,3,'2022-05-19'),(11,1,3,'2022-05-19'),(12,1,3,'2022-05-19'),(13,1,2,'2022-05-20'),(14,1,2,'2022-05-13'),(15,2,2,'2022-05-01'),(16,1,2,'2022-05-19'),(17,2,2,'2022-05-01'),(18,3,4,'2022-05-03'),(19,1,2,'2022-05-03'),(20,1,1,'2022-05-03'),(21,1,1,'2022-05-06'),(22,1,4,'2022-05-06'),(23,1,1,'2022-05-06'),(24,23,1,'2022-05-11'),(25,23,1,'2022-05-11'),(26,1,1,'2022-05-11'),(27,1,1,'2022-05-12'),(28,1,1,'2022-05-03'),(29,1,1,'2022-05-03');
+INSERT INTO `citas` VALUES (105,'Mario Magdaleno','55550123432','2022-05-25 07:05:00'),(106,'Manuel Ruiz','46127209461','2022-05-27 09:15:00'),(107,'Manuel Ruiz','46127209461','2022-05-19 10:26:00'),(108,'Mario Magdaleno','55550123432','2022-05-11 10:30:00'),(109,'Mario Magdaleno','55550123432','2022-05-20 10:30:00'),(110,'Manuel Ruiz','46127209461','2022-05-31 07:35:00'),(111,'Manuel Ruiz','46127209461','2022-05-24 17:35:00'),(112,'Manuel Ruiz','46127209461','2022-05-18 11:11:00'),(113,'Mario Magdaleno','55550123432','2022-05-26 11:50:00'),(114,'Manuel Ruiz','46127209461','2022-05-20 02:30:00'),(115,'Manuel Ruiz','46127209461','2022-05-19 01:10:00'),(116,'Manuel Ruiz','46127209461','2022-05-12 00:30:00'),(117,'Laura Flores','34219834021','2022-05-25 00:35:00'),(118,'Mario Magdaleno','87459302134','2022-05-17 07:05:00'),(119,'Mario Magdaleno','87459302134','2022-06-01 09:55:00');
 /*!40000 ALTER TABLE `citas` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-10 23:25:51
+-- Dump completed on 2022-05-18 18:47:53

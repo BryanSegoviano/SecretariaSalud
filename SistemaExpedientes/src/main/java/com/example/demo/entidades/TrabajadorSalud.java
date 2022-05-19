@@ -60,7 +60,4 @@ public class TrabajadorSalud extends Persona{
     public void setDatoBiometrico(byte[] datoBiometrico) {
         this.datoBiometrico = datoBiometrico;
     }
-
-
- 
 }

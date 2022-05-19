@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="cuerpoFormulario" id="cuerpoFormulario">
-            <form class="formulariologin" id="formulariologin" method="post" >
+            <form class="formulariologin" id="formulariologin" method="post" action="InicioSesion" >
 
                 <div class="container" id="cuerpoFormulario">
                     <img src="img/banner.png" alt="secretariasalud" width="1200">
@@ -28,13 +28,13 @@
                     <br/><br/>
                     <label for="psw"><b>Contraseña</b></label>
                     <input type="password" class="txt" id="txtUContrasena"  name="txtUContrasena" placeholder="Contraseña" required="">
-
+                    <br/><br/>
+                    <input type="submit" value="Iniciar Sesion" id="boton"/> 
                 </div>
             </form>
             <br/>
-            <form method="POST" action="menuPrincipal.jsp">
-                <input type="submit" value="Iniciar Sesion" id="boton"/> 
-            </form>
+
+
             <br/>
             <img src="img/bannerabajo.png" alt="gobiernomex" width="1200">
         </div>
