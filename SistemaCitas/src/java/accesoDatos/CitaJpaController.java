@@ -5,7 +5,7 @@
  */
 package accesoDatos;
 
-import accesoDatos.exceptions.NonexistentEntityException;
+import Servlets.exceptions.NonexistentEntityException;
 import dominio.Cita;
 import java.io.Serializable;
 import java.util.List;

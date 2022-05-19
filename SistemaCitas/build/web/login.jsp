@@ -1,9 +1,3 @@
-<%-- 
-    Document   : login
-    Created on : 21/04/2022, 05:48:58 PM
-    Author     : l3tal
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -30,16 +24,16 @@
                     <p>Ingresa tu usuario y contraseña para iniciar sesión.</p>
                     <hr>
                     <label for="uname"><b>Nombre de Usuario</b></label>
-                    <input type="text" class="txt" id="txtUsuario" name="txtUsuario" placeholder="Nombre de Usuario">
+                    <input type="text" class="txt" id="txtUsuario" name="txtUsuario" placeholder="Nombre de Usuario" required="">
                     <br/><br/>
                     <label for="psw"><b>Contraseña</b></label>
-                    <input type="password" class="txt" id="txtUContrasena"  name="txtUContrasena" placeholder="Contraseña">
+                    <input type="password" class="txt" id="txtUContrasena"  name="txtUContrasena" placeholder="Contraseña" required="">
 
                 </div>
             </form>
             <br/>
-            <form method="POST" action="home.jsp">
-                <input type="submit" value="Iniciar Sesion"/>
+            <form method="POST" action="menuPrincipal.jsp">
+                <input type="submit" value="Iniciar Sesion" id="boton"/> 
             </form>
             <br/>
             <img src="img/bannerabajo.png" alt="gobiernomex" width="1200">

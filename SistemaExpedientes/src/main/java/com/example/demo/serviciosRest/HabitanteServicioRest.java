@@ -42,4 +42,8 @@ public class HabitanteServicioRest {
     public ArrayList<Habitante> consultarPorNombre(String nombre){
         return (ArrayList<Habitante>) this.habitanteRepository.findByNombre(nombre);
     }
+    
+    public Habitante consultarPornss(String nss){
+        return this.habitanteRepository.findBynss(nss);
+    }
 }

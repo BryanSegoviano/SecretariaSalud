@@ -8,6 +8,7 @@ import java.util.ArrayList;
  @Repository
 public interface HabitanteRepository extends CrudRepository<Habitante, Integer> {
     public abstract ArrayList<Habitante> findByNombre(String nombre);
+    public abstract Habitante findBynss(String nss);
     public abstract Habitante findByIdhabitante (Integer id);
 }
 

@@ -10,32 +10,18 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "expedientes")
-
 public class Expediente {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
     private int idExpediente;
-
-    @Column()
-    private byte[] imagenes;
-
-    @Column(nullable = false)
+    private String imagenes;
     private String informacionGeneral;
-
-    @Column()
-    private byte[] documento;
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idExpediente")
+    private String documento;
     private List<Habitante> habitanteList;
 
     public Expediente() {
     }
 
-    public Expediente(int idExpediente, byte[] imagenes, String informacionGeneral, byte[] documento) {
+    public Expediente(int idExpediente, String imagenes, String informacionGeneral, String documento) {
         this.idExpediente = idExpediente;
         this.imagenes = imagenes;
         this.informacionGeneral = informacionGeneral;
@@ -50,11 +36,11 @@ public class Expediente {
         this.idExpediente = idExpediente;
     }
 
-    public byte[] getImagenes() {
+    public String getImagenes() {
         return imagenes;
     }
 
-    public void setImagenes(byte[] imagenes) {
+    public void setImagenes(String imagenes) {
         this.imagenes = imagenes;
     }
 
@@ -66,11 +52,11 @@ public class Expediente {
         this.informacionGeneral = informacionGeneral;
     }
 
-    public byte[] getDocumento() {
+    public String getDocumento() {
         return documento;
     }
 
-    public void setDocumento(byte[] documento) {
+    public void setDocumento(String documento) {
         this.documento = documento;
     }
 

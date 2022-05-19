@@ -1,4 +1,4 @@
-
+<!--
 
 <%@page import="org.json.JSONObject"%>
 <%@page import="java.util.List"%>
@@ -17,21 +17,21 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1 id="titulo">Consultar expediente</h1>
+        <h1 id="titulo">Ver expedientes</h1>
         <div class="informaicon" id="divInfo">
 
             <div id="divIzquierda" class="caja1">
                 <h3>Datos personales</h3>
                 <div id="divDaosPersonales">
                     <%
+                        /**
                         for (JSONObject listaExpediente : listaExpedientes) {
                             JSONObject expediente = (JSONObject) listaExpediente.get("idExpediente");
                             out.print(
-                                    
                                     "<div id=\"divIzquierda\" class=\"caja1\">"
                                     + "<h3>Expediente</h3>"
                                     + "<div id=\"divDaosPersonales\">"
-                                    + "<img src=\"data:image/png;base64," + listaExpediente.get("datoBiometrico") + "\" width=\"100\"  height=\"100\" /> <br/>"        
+                                    + "<img src=\"data:image/png;base64," + listaExpediente.get("datoBiometrico") + "\" width=\"100\"  height=\"100\" /> <br/>"
                                     + "<label>Nombre: "
                                     + listaExpediente.get("nombre")
                                     + "</label><br/><br/>"
@@ -51,7 +51,10 @@
                                     + "</div></div>"
                             );
                         }
+                        **/
                     %>
                 </div>
-                </body>
-                </html>
+            </div>
+        </div>
+    </body>
+</html>-->

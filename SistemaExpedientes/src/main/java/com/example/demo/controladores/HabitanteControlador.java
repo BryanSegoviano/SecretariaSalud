@@ -38,9 +38,14 @@ public class HabitanteControlador {
     }
 
     // Consultar por id un habitante
-    @GetMapping(path = "/{id}")
-    public Habitante consultarPorIdHabitante(@PathVariable("id") int id) {
-        return this.habitanteServicio.consultarPorId(id);
+//    @GetMapping(path = "/{id}")
+//    public Habitante consultarPorIdHabitante(@PathVariable("id") int id) {
+//        return this.habitanteServicio.consultarPorId(id);
+//    }
+    
+    @GetMapping(path = "/{nss}")
+    public Habitante consultarPorNssHabitante(@PathVariable("nss") String nss) {
+        return this.habitanteServicio.consultarPornss(nss);
     }
     
     // Consultar todos los habitantes

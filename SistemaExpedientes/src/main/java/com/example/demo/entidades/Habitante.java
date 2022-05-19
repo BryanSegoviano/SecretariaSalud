@@ -38,6 +38,16 @@ public class Habitante extends Persona implements Serializable {
     @ManyToOne(optional = false)
     private Expediente idExpediente;
 
+    @Column(nullable = false)
+    private String nss;
+    
+    @Column(nullable = false)
+    private String doctor;
+        
+    @Column(nullable = false)
+    private String consultorio;
+    
+    
     public Habitante() {
     }
 
@@ -97,9 +107,33 @@ public class Habitante extends Persona implements Serializable {
         this.idExpediente = idExpediente;
     }
 
+    public String getNss() {
+        return nss;
+    }
+
+    public void setNss(String nss) {
+        this.nss = nss;
+    }
+
+    public String getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(String doctor) {
+        this.doctor = doctor;
+    }
+
+    public String getConsultorio() {
+        return consultorio;
+    }
+
+    public void setConsultorio(String consultorio) {
+        this.consultorio = consultorio;
+    }
+
     @Override
     public String toString() {
-        return "Habitante{" + "idhabitante=" + idhabitante + ", nombre=" + nombre + ", direccion=" + direccion + ", edad=" + edad + ", datoBiometrico=" + datoBiometrico + ", idTutor=" + idTutor + ", idExpediente=" + idExpediente + '}';
+        return "Habitante{" + "idhabitante=" + idhabitante + ", nombre=" + nombre + ", direccion=" + direccion + ", edad=" + edad + ", datoBiometrico=" + datoBiometrico + ", idTutor=" + idTutor + ", idExpediente=" + idExpediente + ", nss=" + nss + ", doctor=" + doctor + ", consultorio=" + consultorio + '}';
     }
     
 }

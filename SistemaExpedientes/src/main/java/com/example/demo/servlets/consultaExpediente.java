@@ -24,29 +24,7 @@ public class consultaExpediente extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String listaExpedientesTexto = null;
-        String uri = "http://localhost:8080/habitantes";
-        try {
-            URL url = new URL(uri);
-            HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
-            conexion.setRequestMethod("GET");
-            conexion.setRequestProperty("Accept", "application/json");
-
-            InputStreamReader isr = new InputStreamReader(conexion.getInputStream());
-            BufferedReader br = new BufferedReader(isr);
-            listaExpedientesTexto = br.readLine();
-        } catch (IOException ex) {
-            System.out.println(ex);
-        }
-
-        JSONArray array = new JSONArray(listaExpedientesTexto);
-        List<JSONObject> listaExpedientes = new ArrayList();
-        for (int i = 0; i < array.length(); listaExpedientes.add(array.getJSONObject(i++)));
-
-        HttpSession session = request.getSession();
-        session.setAttribute("listaExpedientes", listaExpedientes);
-        System.out.println(listaExpedientes);
-        response.sendRedirect("consultaExpediente.jsp");
+        response.sendRedirect("servidor.html");
     }
 
 // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

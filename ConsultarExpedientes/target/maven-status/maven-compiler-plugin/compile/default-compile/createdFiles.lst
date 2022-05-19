@@ -1,0 +1,4 @@
+servlets\consultarExpedientes.class
+entidades\Persona.class
+entidades\Expediente.class
+entidades\Habitante.class

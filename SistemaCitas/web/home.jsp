@@ -1,9 +1,3 @@
-<%-- 
-    Document   : home
-    Created on : 7/05/2022, 08:15:05 PM
-    Author     : l3tal
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,9 +12,9 @@
             <h1>Registrar cita</h1>
             <label for="start"> <b>Elija fecha para la cita:</b></label>
 
-            <input type="date" id="fecha" name="fecha"
-                   value="2022-05-01"
-                   min="2022-05-01" max="2022-12-31">
+            <input type="datetime-local" id="fecha"
+                   name="fecha" value="2022-05-02T00:00"
+                   min="2022-05-01T00:00" max="2022-12-31T00:00">
             <br>           
             <br>
             <label for="text"> <b>Doctor:</b></label>
@@ -28,13 +22,13 @@
             <br>
             <br>
             <label for="id"><b>Habitante:</b></label>
-            <input type="text" class="txt" id="identificadorHabitante" placeholder="Ingresa el ID del Habitate" name="identificadorHabitante"  required="" required pattern="^\d+$">
+            <input type="text" class="txt" id="identificadorHabitante" placeholder="Ingresa el NSS del habitante" name="identificadorHabitante"  required="" required pattern="^\d+$">
             <br>
             <br>
             <br>
             <br>
-            <input type="submit" value="Enviar datos" class="btn" id="btnEnviarDatos">
-            
+            <input type="submit" value="Registrar cita" class="btn" id="btnEnviarDatos">
+
         </form>
         <br/>
         <img src="img/bannerabajo.png" alt="gobiernomex" width="1200">

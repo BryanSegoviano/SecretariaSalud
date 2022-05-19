@@ -1,56 +1,65 @@
 package dominio;
 
 import java.io.Serializable;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "habitantes")
 public class Habitante extends Persona implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
     private int idhabitante;
-
-    @Column(nullable = false)
     private String nombre;
-
-    @Column(nullable = false)
     private String direccion;
-
-    @Column(nullable = false)
     private int edad;
-
-    @Column(nullable = true)
-    private byte[] datoBiometrico;
-
-    @Column(nullable = true)
     private int idTutor;
-    
-    @JoinColumn(name = "idExpediente", referencedColumnName = "idExpediente")
-    @ManyToOne(optional = false)
     private Expediente idExpediente;
-
+    private String datoBiometrico;
+    private String nss;
+    private String doctor;
+    private String consultorio;
+    
     public Habitante() {
     }
 
-    public Habitante(int idhabitante, String nombre, String direccion, int edad, byte[] datoBiometrico, int idTutor, Expediente idExpediente) {
+    public Habitante(int idhabitante, String nombre, String direccion, int edad, int idTutor, Expediente idExpediente, String datoBiometrico) {
         this.idhabitante = idhabitante;
         this.nombre = nombre;
         this.direccion = direccion;
         this.edad = edad;
-        this.datoBiometrico = datoBiometrico;
         this.idTutor = idTutor;
         this.idExpediente = idExpediente;
+        this.datoBiometrico = datoBiometrico;
     }
 
+    public Habitante(int idhabitante, String nombre, String direccion, int edad, int idTutor, Expediente idExpediente, String datoBiometrico, String nss) {
+        this.idhabitante = idhabitante;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.edad = edad;
+        this.idTutor = idTutor;
+        this.idExpediente = idExpediente;
+        this.datoBiometrico = datoBiometrico;
+        this.nss = nss;
+    }
+
+    public Habitante(int idhabitante, String nombre, String direccion, int edad, int idTutor, Expediente idExpediente, String datoBiometrico, String nss, String doctor, String consultorio) {
+        this.idhabitante = idhabitante;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.edad = edad;
+        this.idTutor = idTutor;
+        this.idExpediente = idExpediente;
+        this.datoBiometrico = datoBiometrico;
+        this.nss = nss;
+        this.doctor = doctor;
+        this.consultorio = consultorio;
+    }
+    
+    public String getDatoBiometricoConversion() {
+        return datoBiometrico;
+    }
+
+    public void setDatoBiometricoConversion(String datoBiometricoConversion) {
+        this.datoBiometrico = datoBiometricoConversion;
+    }
+    
     public int getIdhabitante() {
         return idhabitante;
     }
@@ -83,13 +92,6 @@ public class Habitante extends Persona implements Serializable {
         this.edad = edad;
     }
 
-    public byte[] getDatoBiometrico() {
-        return datoBiometrico;
-    }
-
-    public void setDatoBiometrico(byte[] datoBiometrico) {
-        this.datoBiometrico = datoBiometrico;
-    }
 
     public int getIdTutor() {
         return idTutor;
@@ -107,9 +109,33 @@ public class Habitante extends Persona implements Serializable {
         this.idExpediente = idExpediente;
     }
 
+    public String getNss() {
+        return nss;
+    }
+
+    public void setNss(String nss) {
+        this.nss = nss;
+    }
+
+    public String getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(String doctor) {
+        this.doctor = doctor;
+    }
+
+    public String getConsultorio() {
+        return consultorio;
+    }
+
+    public void setConsultorio(String consultorio) {
+        this.consultorio = consultorio;
+    }
+
     @Override
     public String toString() {
-        return "Habitante{" + "idhabitante=" + idhabitante + ", nombre=" + nombre + ", direccion=" + direccion + ", edad=" + edad + ", datoBiometrico=" + datoBiometrico + ", idTutor=" + idTutor + ", idExpediente=" + idExpediente + '}';
+        return "Habitante{" + "idhabitante=" + idhabitante + ", nombre=" + nombre + ", direccion=" + direccion + ", edad=" + edad + ", idTutor=" + idTutor + ", idExpediente=" + idExpediente + ", datoBiometrico=" + datoBiometrico + ", nss=" + nss + ", doctor=" + doctor + ", consultorio=" + consultorio + '}';
     }
-    
+
 }
