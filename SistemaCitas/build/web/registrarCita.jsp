@@ -36,7 +36,7 @@
                 <h3>Ingrese el Número de Seguro Social del habitante al que desea asignarle una cita.</h3>
                 <br>
                 <p>
-                    <input type="text" name="nss" id="nss" placeholder="Ingrese el NSS">
+                    <input type="text" name="nss" id="nss" placeholder="Ingrese el NSS" required>
                 </p>
                 <br/>
                 <p>

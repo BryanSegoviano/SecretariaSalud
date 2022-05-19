@@ -37,7 +37,7 @@
                 <h3>Ingrese el Número de Seguro Social del habitante del que desea ver el expediente.</h3>
                 <br>
                 <p>
-                    <input type="text" name="nss" id="nss" placeholder="Ingrese el NSS">
+                    <input type="text" name="nss" id="nss" placeholder="Ingrese el NSS" required>
                 </p>
                 <br/>
                 <p>
